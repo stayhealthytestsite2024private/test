@@ -37,12 +37,25 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Tabs.Main:AddButton({
+    Title = "TP
+    Description = "Teleport your charcter up 100 Studs",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Teleport the player 100 studs up by modifying the CFrame
+humanoidRootPart.CFrame = humanoidRootPart.CFrame + Vector3.new(0, 100, 0)
+    end
+})
+
+Tabs.Main:AddButton({
     Title = "Reset",
     Description = "Reset your charcter",
     Callback = function()
         local player = game.Players.LocalPlayer
-player:LoadCharacter()
+if player.Character and player.Character:FindFirstChild("Humanoid") then
+    player.Character.Humanoid.Health = 0
+end
     end
 })
-
-
