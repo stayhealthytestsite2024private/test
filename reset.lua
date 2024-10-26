@@ -41,9 +41,7 @@ Tabs.Main:AddButton({
     Description = "Reset your charcter",
     Callback = function()
         local player = game.Players.LocalPlayer
-if player.Character and player.Character:FindFirstChild("Humanoid") then
-    player.Character.Humanoid.Health = 0
-end
+player:LoadCharacter()
     end
 })
 
