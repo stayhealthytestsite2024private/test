@@ -2,11 +2,10 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-local version = "1.1.1"
 
 local Window = Fluent:CreateWindow({
-    Title = "CrackedHub-SpaceGame" .. version,
-    SubTitle = "by dawid",
+    Title = "CrackedHub-SpaceGame",
+    SubTitle = "by xmanuel",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
