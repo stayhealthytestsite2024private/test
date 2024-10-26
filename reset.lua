@@ -36,7 +36,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 
 Window:SelectTab(1)
 
-Main:AddButton({
+Tabs.Main:AddButton({
     Title = "Reset",
     Description = "Reset your charcter",
     Callback = function()
